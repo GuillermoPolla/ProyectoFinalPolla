@@ -1,13 +1,10 @@
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
-import CartWidget from './components/cartwidget/CartWidget';
 
 const Header = () => {
   return (
     <header>
-      <h1>Flash Shop</h1>
       <NavBar />
-      <CartWidget />
     </header>
   );
 };
@@ -24,4 +21,3 @@ function App() {
 }
 
 export default App;
- 

@@ -1,22 +1,29 @@
 
+
 .navbar {
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  li {
-    margin: 0 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
+  background-color: #333;
+  padding: 10px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  height: 100%;  
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.navbar .cart-widget {
+  display: flex;
+  align-items: center;
+}
