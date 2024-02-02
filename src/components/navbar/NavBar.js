@@ -1,7 +1,7 @@
 
 import './NavBar.css';
-import ItemListContainer from '../itemlistcontainer/ItemListContainer';
 import CartWidget from '../cartwidget/CartWidget';
+
 const NavBar = () => {
   return (
     <nav className="navbar">
