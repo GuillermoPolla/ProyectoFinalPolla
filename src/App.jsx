@@ -1,23 +1,33 @@
+// App.js
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
+import Footer from './components/footer/Footer'
+import Cart from './components/cart/Cart'
+import Checkout from './components/checkout/Checkout'
+import { CartProvider } from './components/cart/Cartcontext';
+import CartPage from './components/cart/CartPage'; // Importa el componente CartPage
+import ItemDetailContainer from './components/itemdetailscontainer/ItemDetailsContainer'
 
-const Header = () => {
+export const App = () => {
   return (
-    <header>
-      <NavBar />
-    </header>
+    <BrowserRouter>
+      <CartProvider>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/cart' element={<CartPage />} /> {/* Ruta para mostrar el carrito */}
+          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/productos' element={<ItemListContainer />} />
+          <Route path='/product/:productId' element={<ItemDetailContainer />} /> {/* Ruta para mostrar detalles del producto */}
+        </Routes>
+        <Footer />
+      </CartProvider>
+    </BrowserRouter>
   );
 };
 
-function App() {
-  const greetingMessage = '¡Bienvenido a la unica tienda mas rapida que el mismo Flash!';
 
-  return (
-    <div className="App">
-      <Header />
-      <ItemListContainer greeting={greetingMessage} />
-    </div>
-  );
-}
 
 export default App;

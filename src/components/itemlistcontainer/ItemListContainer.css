@@ -1,12 +1,12 @@
-.item-list-container {
-    padding: 20px;
-    background-color: #f3c4c4;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .item-list-container p {
-    font-size: 18px;
-    color: #333;
-  }
-  
+/* ItemListContainer.css */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas con el mismo ancho */
+  gap: 20px; /* Espacio entre las celdas */
+}
+
+.grid-item {
+  border: 1px solid #ddd; /* Borde para cada elemento de la cuadrícula */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto al centro */
+}
