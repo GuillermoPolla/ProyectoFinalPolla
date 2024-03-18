@@ -16,8 +16,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h2>Carrito de compras</h2>
-      <ul>
+        <ul>
         {cartItems.map((item, index) => (
           <li key={index}>
             {item.name} - {item.size} - {item.price}
