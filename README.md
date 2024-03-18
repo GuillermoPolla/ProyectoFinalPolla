@@ -1,4 +1,5 @@
 Flash Shop - E-commerce de Ropa
+
 Flash Shop es una aplicación web de comercio electrónico desarrollada en React. Permite a los usuarios explorar una variedad de productos de ropa flash y realizar compras en línea de manera fácil y segura.
 
 Características
