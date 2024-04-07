@@ -1,46 +1,28 @@
 {
-    "productos": [
-      {
-        "id": 1,
-        "nombre": "Shorts",
-        "talles": [
-          "S",
-          "M",
-          "L"
-        ]
-      },
-      {
-        "id": 2,
-        "nombre": "Remeras",
-        "talles": [
-          "S",
-          "M",
-          "L"
-        ]
-      },
-      {
-        "id": 3,
-        "nombre": "Gorras",
-        "talles": [
-          "S",
-          "M",
-          "L"
-        ]
-      },
-      {
-        "id": 4,
-        "nombre": "Zapatos",
-        "talles": [
-          "37",
-          "38",
-          "39",
-          "40",
-          "41",
-          "42",
-          "43",
-          "44",
-          "45"
-        ]
-      }
-    ]
-  }
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Shorts",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuD6NFmc7dwrpWE5lIpRzosBueVmBrOvM55-lXIk63Cw&s",
+      "Sizes": ["S", "M", "L"]
+    },
+    {
+      "id": 2,
+      "nombre": "Remeras",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfVAIS_XwAbCsb6LzaYH2qZuA6nj3AFGSOgytrHAqgMQ&s",
+      "Sizes": ["S", "M", "L"]
+    },
+    {
+      "id": 3,
+      "nombre": "Gorras",
+      "image": "https://m.media-amazon.com/images/I/71wKW8myiAL._AC_SX679_.jpg",
+      "Sizes": ["S", "M", "L"]
+    },
+    {
+      "id": 4,
+      "nombre": "Zapatos",
+      "image": "https://m.media-amazon.com/images/I/71ycLNPywnL._AC_UY900_.jpg",
+      "Sizes": ["37", "38", "39", "40", "41", "42", "43", "44", "45"]
+    }
+  ]
+}

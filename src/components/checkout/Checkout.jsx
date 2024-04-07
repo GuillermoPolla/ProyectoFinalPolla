@@ -1,46 +1,28 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Checkout.css';
 
-const CheckoutPage = () => {
-  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '' });
-  const navigate = useNavigate(); // Mueve la declaración de navigate aquí
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+const Checkout = () => {
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Aquí puedes enviar los datos del formulario a tu backend o realizar otras acciones necesarias
-
+    // Realizar cualquier acción necesaria antes de redirigir
     navigate('/'); // Redirige al usuario al inicio
   };
 
   return (
-    <div>
+    <div className="checkout-container">
       <h2>Checkout</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nombre:
-          <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Apellido:
-          <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} />
-        </label>
-        <br />
-        <label>
-          Correo electrónico:
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-        </label>
-        <br />
-        <button type="submit">Enviar</button>
+      <form className="checkout-form" onSubmit={handleSubmit}>
+        <input type="text" className="checkout-input" placeholder="Nombre" />
+        <input type="text" className="checkout-input" placeholder="Apellido" />
+        <input type="email" className="checkout-input" placeholder="Correo electrónico" />
+        <input type="tel" className="checkout-input" placeholder="Teléfono" />
+        <button type="submit" className="checkout-button">Finalizar compra</button>
       </form>
     </div>
   );
 };
 
-export default CheckoutPage;
+export default Checkout;

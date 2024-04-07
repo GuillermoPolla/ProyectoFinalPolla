@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCart } from '../cart/Cartcontext'; // Importa useCart desde tu contexto de carrito
 import { useNavigate } from 'react-router-dom';
+import './Cart.css'; // Importa el archivo CSS
 
 const CartPage = () => {
   const { cartItems, clearCart, removeItem } = useCart(); // Obtiene el estado del carrito y las funciones para limpiarlo y eliminar productos desde el contexto
@@ -38,20 +39,18 @@ const CartPage = () => {
   };
 
   return (
-    <div>
+    <div className="cart-container">
       <h2>Carrito de compras</h2>
       {groupedItems.length === 0 ? (
         <p>El carrito está vacío</p>
       ) : (
         <div>
-          <ul>
-            {groupedItems.map((item, index) => (
-              <li key={index}>
-                {item.name} - {item.size} - Cantidad: {item.quantity} - Precio: ${item.price * item.quantity}
-                <button onClick={() => handleRemoveItem(item.id, item.size)}>Eliminar</button>
-              </li>
-            ))}
-          </ul>
+          {groupedItems.map((item, index) => (
+            <div key={index} className="cart-item">
+              {item.name} - {item.size} - Cantidad: {item.quantity} - Precio: ${item.price * item.quantity}
+              <button onClick={() => handleRemoveItem(item.id, item.size)}>Eliminar</button>
+            </div>
+          ))}
           <p>Monto total: ${getTotalPrice()}</p>
           <button onClick={handleFinishPurchase}>Finalizar compra</button>
           <button onClick={clearCart}>Vaciar carrito</button>

@@ -1,12 +1,33 @@
 /* ItemListContainer.css */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas con el mismo ancho */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Columnas automáticas con ancho mínimo de 250px */
   gap: 20px; /* Espacio entre las celdas */
+  padding: 20px; /* Espaciado interno */
 }
 
 .grid-item {
   border: 1px solid #ddd; /* Borde para cada elemento de la cuadrícula */
   padding: 20px; /* Espaciado interno */
   text-align: center; /* Alineación del texto al centro */
+}
+
+.grid-item img {
+  max-width: 100%; /* Imágenes ajustadas al ancho máximo del contenedor */
+}
+
+.grid-item p {
+  margin: 10px 0; /* Margen en la parte superior e inferior del párrafo */
+}
+
+.grid-item button {
+  background-color: #333; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  padding: 5px 10px; /* Espaciado interno del botón */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.grid-item button:hover {
+  background-color: #555; /* Cambia el color de fondo al pasar el mouse sobre el botón */
 }

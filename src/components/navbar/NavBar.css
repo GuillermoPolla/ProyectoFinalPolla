@@ -1,6 +1,13 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   background-color: #333;
-  padding: 10px;
+  padding: 18px;
+  margin: 0;
+  width: 100%;
 }
 
 ul {
@@ -9,6 +16,8 @@ ul {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -31,4 +40,11 @@ a {
 .navbar .cart-widget {
   display: flex;
   align-items: center;
+} 
+
+.cart-icon {
+  font-size: 24px;
+  margin-right: 8px;
+  cursor: pointer;
+  color: blue; /* Cambia 'blue' por el color que desees */
 }

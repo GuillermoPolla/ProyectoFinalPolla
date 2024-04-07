@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useCart } from '../cart/Cartcontext';
 import { getProductById } from '../firebase/firebasefunctions'; // Importa la función getProductById desde firebaseFunctions
+import './ItemDetailsContainer.css';
 
 const ItemDetailsContainer = () => {
   const { productId } = useParams();
@@ -22,14 +23,21 @@ const ItemDetailsContainer = () => {
   };
 
   const handleAddToCart = () => {
+    if (!selectedSize) {
+      alert('Por favor selecciona un talle');
+      return;
+    }
+  
     addToCart({
+      id: productId,
       name: product.Name,
       size: selectedSize,
       price: product.Price,
       quantity: 1,
     });
   };
-
+  
+  
   if (!product) {
     return <div>Producto no encontrado</div>;
   }
@@ -46,6 +54,9 @@ const ItemDetailsContainer = () => {
       </select>
       <p> El precio es : ${product.Price}</p>
       <button onClick={handleAddToCart}>Agregar al carrito</button>
+      <p>Solo se permite agregar un item debido a problemas de stock</p>
+      <p>Gracias y disculpen el incoveniente</p>
+      <Link to="/" className="back-link">Volver a la lista</Link>
     </div>
   );
 };
